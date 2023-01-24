@@ -1,0 +1,42 @@
+.text_container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  padding-top: 12vh;
+  padding-bottom: 11vh;
+  padding-left: 20vw;
+  padding-right: 30vw;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.text_container h1 {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 80px;
+  line-height: 90px;
+}
+
+.text_container p {
+  font-style: normal;
+  font-weight: 300;
+  font-size: 1.3rem;
+  line-height: 28px;
+}
+
+.text_container span {
+  color: var(--color-detail);
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .text_container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+
+  .text_container h1 {
+    font-size: 70px;
+    line-height: 90px;
+  }
+}
