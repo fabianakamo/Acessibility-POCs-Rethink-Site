@@ -1,10 +1,29 @@
-import React from "react";
-import styles from "./titleContent.module.css";
+import React, { useState } from "react";
+import mainTheme from "./titleContent.module.css";
+import light from "./lightTheme.module.css";
+import dark from "./darkTheme.module.css";
 
 export default function TitleContent() {
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  const styles = { light, dark };
+
+  const changeColor = () => {
+    if (theme === "light") {
+      setTheme("dark");
+    }
+    if (theme === "dark") {
+      setTheme("light");
+    }
+  };
   return (
     <>
-      <div className={styles.text_container}>
+      <p>
+        <button onClick={changeColor}>Trocar Cor</button>
+      </p>
+      <div
+        className={`${styles[theme].text_container} ${mainTheme.text_container}`}
+      >
         <h1>Rethink Academy</h1>
         <p>
           O Rethink Academy é o programa de estágio e formação da Rethink,

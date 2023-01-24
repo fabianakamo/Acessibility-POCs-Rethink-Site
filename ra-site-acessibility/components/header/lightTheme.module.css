@@ -1,0 +1,28 @@
+.header_container {
+    background-color: var(--color-light);
+}
+
+.header_buttons a,
+.mobile_buttons a {
+    color: var(--color-dark);
+}
+
+.header_buttons a:hover,
+.mobile_buttons a:hover {
+    color: var(--color-dark);
+}
+
+.hamburger {
+    background-color: var(--color-light);
+}
+
+.hamburger svg {
+    color: var(--color-dark);
+}
+
+@media screen and (max-width: 768px) {
+
+    .mobile_buttons {
+        background-color: var(--color-light);
+    }
+}

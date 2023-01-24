@@ -6,8 +6,6 @@
   padding-bottom: 11vh;
   padding-left: 20vw;
   padding-right: 30vw;
-  background-color: var(--color-dark);
-  color: var(--color-light);
 }
 
 .text_container h1 {
@@ -25,7 +23,6 @@
 }
 
 .text_container span {
-  color: var(--color-detail);
   font-weight: 400;
 }
 

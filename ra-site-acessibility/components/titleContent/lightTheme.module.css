@@ -1,0 +1,8 @@
+.text_container {
+    background-color: var(--color-light);
+    color: var(--color-dark);
+}
+
+.text_container span {
+    color: var(--color-dark);
+}
