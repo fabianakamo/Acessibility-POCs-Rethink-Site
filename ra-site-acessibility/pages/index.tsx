@@ -1,3 +1,4 @@
+import FloatingWpp from "@/components/floatingWpp";
 import Footer from "@/components/footer";
 import Nav from "@/components/header";
 import MailForm from "@/components/mailForm";
@@ -13,6 +14,7 @@ export default function Home() {
       <TitleContent />
       <MailForm />
       <Footer />
+      <FloatingWpp />
     </>
   );
 }

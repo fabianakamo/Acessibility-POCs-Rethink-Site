@@ -1,0 +1,20 @@
+.wpp_container {
+  position: fixed;
+  bottom: 0px;
+  right: 0px;
+  width: 66px;
+  height: 66px;
+  background-color: #2dce65;
+  border-radius: 50%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 16px;
+}
+
+.iconWpp {
+  color: white;
+  width: 36px;
+  height: 36px;
+}
