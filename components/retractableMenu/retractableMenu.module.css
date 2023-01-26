@@ -1,0 +1,57 @@
+.menu_container {
+  background-color: var(--color-detail);
+  max-width: 210px;
+  height: 60px;
+  bottom: 90px;
+  right: 16px;
+  position: fixed;
+  cursor: pointer;
+  border: 1px solid;
+  border-radius: 9999px;
+  transition: width 1s;
+}
+
+.relative_div {
+  display: flex;
+  position: relative;
+  overflow: hidden;
+  flex-direction: row-reverse;
+}
+
+.menu_button {
+  width: 60px;
+  height: 60px;
+  color: var(--color-dark);
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  border-radius: 50%;
+}
+
+.content {
+  position: absolute;
+  right: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  color: black;
+  border-radius: 9999px;
+  transition: width 1s;
+  transition: opacity 1s;
+}
+
+.active {
+  opacity: 1;
+  transition: width 1s;
+  transition: opacity 1s;
+}
+
+.icon_accessibility {
+  width: 36px;
+  height: 36px;
+}

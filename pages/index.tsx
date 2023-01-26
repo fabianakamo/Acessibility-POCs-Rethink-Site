@@ -2,6 +2,7 @@ import FloatingWpp from "@/components/floatingWpp";
 import Footer from "@/components/footer";
 import Nav from "@/components/header";
 import MailForm from "@/components/mailForm";
+import RetractableMenu from "@/components/retractableMenu";
 import TitleContent from "@/components/titleContent";
 import { Inter } from "@next/font/google";
 
@@ -14,6 +15,7 @@ export default function Home() {
       <TitleContent />
       <MailForm />
       <Footer />
+      <RetractableMenu />
       <FloatingWpp />
     </>
   );
