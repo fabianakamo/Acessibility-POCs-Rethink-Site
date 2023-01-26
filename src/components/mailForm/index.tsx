@@ -1,6 +1,9 @@
-import React, { useRef } from "react";
-import styles from "./mailForm.module.css";
+import React, { useEffect, useRef, useState } from "react";
+import mainTheme from "./mailForm.module.css";
 import emailjs from "@emailjs/browser";
+import light from "./lightTheme.module.css";
+import dark from "./darkTheme.module.css";
+import { useTheme } from "@/src/context/ThemeContext";
 
 import {
   Button,
@@ -15,6 +18,14 @@ import {
 const MailForm = () => {
   const form = useRef<any>();
   const [open, setOpen] = React.useState(false);
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const currentTheme = useTheme();
+
+  useEffect(() => {
+    setTheme(currentTheme.theme.theme);
+  }, [currentTheme]);
+
+  const styles = { light, dark };
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -46,8 +57,14 @@ const MailForm = () => {
   };
 
   return (
-    <div className={styles.form_container}>
-      <form className={styles.form} ref={form} onSubmit={sendEmail}>
+    <div
+      className={`${styles[theme].form_container} ${mainTheme.form_container}`}
+    >
+      <form
+        className={`${styles[theme].form} ${mainTheme.form}`}
+        ref={form}
+        onSubmit={sendEmail}
+      >
         <h1>Entre em contato!</h1>
         <TextField required type="text" label="Nome" name="user_name" />
         <TextField required type="text" label="E-mail" name="user_email" />
@@ -58,9 +75,9 @@ const MailForm = () => {
           name="message"
           rows={4}
         />
-        <div className={styles.form_button}>
+        <div className={mainTheme.form_button}>
           <input
-            className={styles.submit_button}
+            className={`${styles[theme].submit_button} ${mainTheme.submit_button}`}
             type="submit"
             value="Enviar"
             id="input-submit"

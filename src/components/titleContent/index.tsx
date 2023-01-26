@@ -1,26 +1,22 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import mainTheme from "./titleContent.module.css";
 import light from "./lightTheme.module.css";
 import dark from "./darkTheme.module.css";
+import { useTheme } from "@/src/context/ThemeContext";
 
 export default function TitleContent() {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
 
+  const currentTheme = useTheme();
+
+  useEffect(() => {
+    setTheme(currentTheme.theme.theme);
+  }, [currentTheme]);
+
   const styles = { light, dark };
 
-  const changeColor = () => {
-    if (theme === "light") {
-      setTheme("dark");
-    }
-    if (theme === "dark") {
-      setTheme("light");
-    }
-  };
   return (
     <>
-      <p>
-        <button onClick={changeColor}>Trocar Cor</button>
-      </p>
       <div
         className={`${styles[theme].text_container} ${mainTheme.text_container}`}
       >

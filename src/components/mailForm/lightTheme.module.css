@@ -1,0 +1,22 @@
+.form_container {
+    background-color: var(--color-light);
+}
+
+.form {
+    background-color: var(--color-light);
+}
+
+.submit_button {
+    background-color: var(--color-grey);
+    color: var(--color-dark);
+}
+
+.submit_button:hover {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}
+
+.submit_button:focus {
+    background-color: var(--color-dark);
+    color: var(--color-light);
+}

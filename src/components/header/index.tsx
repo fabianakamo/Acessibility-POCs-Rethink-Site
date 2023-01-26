@@ -1,13 +1,20 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import mainTheme from "./header.module.css";
 import light from "./lightTheme.module.css";
 import dark from "./darkTheme.module.css";
 import MenuIcon from "@mui/icons-material/Menu";
+import { useTheme } from "@/src/context/ThemeContext";
 
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  const currentTheme = useTheme();
+
+  useEffect(() => {
+    setTheme(currentTheme.theme.theme);
+  }, [currentTheme]);
 
   const styles = { light, dark };
 
@@ -22,9 +29,6 @@ export default function Nav() {
 
   return (
     <>
-      <p>
-        <button onClick={changeColor}>Trocar Cor</button>
-      </p>
       <div
         className={`${styles[theme].header_container} ${mainTheme.header_container}`}
       >

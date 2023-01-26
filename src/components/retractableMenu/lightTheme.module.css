@@ -1,0 +1,16 @@
+.menu_container {
+    background-color: var(--color-light);
+}
+
+
+.menu_button {
+    color: var(--color-dark);
+}
+
+.content {
+    color: var();
+}
+
+.icon_accessibility {
+    background-color: var(--color-light);
+}

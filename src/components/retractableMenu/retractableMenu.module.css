@@ -1,5 +1,4 @@
 .menu_container {
-  background-color: var(--color-detail);
   max-width: 210px;
   height: 60px;
   bottom: 90px;
@@ -21,7 +20,6 @@
 .menu_button {
   width: 60px;
   height: 60px;
-  color: var(--color-dark);
   background-color: transparent;
   display: flex;
   align-items: center;
@@ -39,10 +37,10 @@
   align-items: center;
   justify-content: center;
   opacity: 0;
-  color: black;
   border-radius: 9999px;
   transition: width 1s;
   transition: opacity 1s;
+  gap: 10px;
 }
 
 .active {
@@ -55,3 +53,8 @@
   width: 36px;
   height: 36px;
 }
+
+/* .icon_increaseText:focus {
+  background-color: pink;
+  color: pink;
+} */

@@ -1,17 +1,34 @@
-import React from "react";
-import styles from "./footer.module.css";
+import React, { useEffect, useState } from "react";
+import mainTheme from "./footer.module.css";
+import light from "./lightTheme.module.css";
+import dark from "./darkTheme.module.css";
+import { useTheme } from "@/src/context/ThemeContext";
+
 import { GitHub, LinkedIn, Instagram, YouTube } from "@mui/icons-material";
 
 export default function Footer() {
+  const [theme, setTheme] = useState<"light" | "dark">("dark");
+
+  const currentTheme = useTheme();
+
+  useEffect(() => {
+    setTheme(currentTheme.theme.theme);
+  }, [currentTheme]);
+
+  const styles = { light, dark };
   return (
-    <div className={styles.footer_container}>
-      <div>
+    <div
+      className={`${styles[theme].footer_container} ${mainTheme.footer_container}`}
+    >
+      <div className={`${styles[theme].footer_logo} ${mainTheme.footer_logo}`}>
         <img
           src="https://res.cloudinary.com/dyszk230x/image/upload/v1673976585/ezgif.com-gif-maker_2_w7yinr.gif"
           alt="Rethink Logo"
         />
       </div>
-      <div className={styles.footer_icons}>
+      <div
+        className={`${styles[theme].footer_icons} ${mainTheme.footer_icons}`}
+      >
         <a
           target="_blank"
           rel="noreferrer"
@@ -43,7 +60,7 @@ export default function Footer() {
           <Instagram />
         </a>
       </div>
-      <div className={styles.footer_info}>
+      <div className={`${styles[theme].footer_info} ${mainTheme.footer_info}`}>
         <p>Powered with ♥ by Gabs, Fabi and Ana</p>
       </div>
     </div>

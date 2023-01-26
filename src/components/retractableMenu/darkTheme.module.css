@@ -1,0 +1,12 @@
+.menu_container {
+    background-color: var(--color-detail);
+}
+
+
+.menu_button {
+    color: var(--color-dark);
+}
+
+.content {
+    color: black;
+}
