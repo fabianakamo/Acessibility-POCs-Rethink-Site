@@ -6,6 +6,7 @@ const FloatingWpp = () => {
   return (
     <a
       target="_blank"
+      rel="noreferrer"
       href="https://wa.me/5527998439277?text=Olá%20!%20Bom%20dia"
       className={styles.wpp_container}
     >
