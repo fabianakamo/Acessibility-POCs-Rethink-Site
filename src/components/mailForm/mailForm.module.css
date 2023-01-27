@@ -27,11 +27,17 @@
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 1.2rem;
   border-radius: 6px;
   border: 1px solid rgba(27, 27, 27, 0.3);
   cursor: pointer;
   text-decoration: none;
+  background-color: var(--color-dark);
+  color: var(--color-light);
+}
+
+.submit_button:hover {
+  background-color: var(--color-secondary-hover);
 }
 
 .form_button {

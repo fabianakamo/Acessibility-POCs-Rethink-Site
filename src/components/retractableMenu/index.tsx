@@ -11,7 +11,7 @@ import dark from "./darkTheme.module.css";
 
 const RetractableMenu = () => {
   const [theme, setTheme] = useState<"light" | "dark">("dark");
-  const [fontNumber, setFontNumber] = useState(12);
+  const [fontNumber, setFontNumber] = useState(16);
   // const [countFont, setCountFont] = useState(0);
   const [toggle, setToggle] = useState(false);
 
@@ -31,7 +31,7 @@ const RetractableMenu = () => {
 
   // Mudança de letras
   const increaseSize = () => {
-    if (fontNumber < 60 && fontNumber >= 10) {
+    if (fontNumber <= 24 && fontNumber >= 10) {
       setFontNumber((prevValue) => (prevValue += prevValue / 10));
       document.documentElement.style.setProperty(
         "--font-size",
@@ -41,7 +41,7 @@ const RetractableMenu = () => {
   };
 
   const decreaseSize = () => {
-    if (fontNumber < 100 && fontNumber >= 10) {
+    if (fontNumber <= 26 && fontNumber >= 14) {
       setFontNumber((prevValue) => (prevValue -= prevValue / 10));
       document.documentElement.style.setProperty(
         "--font-size",
@@ -50,15 +50,10 @@ const RetractableMenu = () => {
     }
   };
 
-  // const normalSize = () => {
-  //   if (fontNumber < 100 && fontNumber >= 10) {
-  //     setFontNumber((prevValue) => (prevValue -= prevValue / 10));
-  //     document.documentElement.style.setProperty(
-  //       "--font-size",
-  //       `${fontNumber - 2}px`
-  //     );
-  //   }
-  // };
+  const normalSize = () => {
+    document.documentElement.style.setProperty("--font-size", `1rem`);
+    setFontNumber(16);
+  };
 
   return (
     <div
@@ -91,11 +86,23 @@ const RetractableMenu = () => {
             />
           </div> */}
           {/* <button onClick={increaseSize}>A+</button> */}
-          <TextIncreaseIcon onClick={increaseSize} />
+          <TextIncreaseIcon
+            className={`${styles[theme].icon_accessibility} ${mainTheme.icon_accessibility}`}
+            onClick={increaseSize}
+          />
           {/* <FormatClearIcon onClick={normalSize} /> */}
-          <FormatClearIcon />
-          <TextDecreaseIcon onClick={decreaseSize} />
-          <ContrastIcon onClick={handleTheme} />
+          <FormatClearIcon
+            className={`${styles[theme].icon_accessibility} ${mainTheme.icon_accessibility}`}
+            onClick={normalSize}
+          />
+          <TextDecreaseIcon
+            className={`${styles[theme].icon_accessibility} ${mainTheme.icon_accessibility}`}
+            onClick={decreaseSize}
+          />
+          <ContrastIcon
+            className={`${styles[theme].icon_accessibility} ${mainTheme.icon_accessibility}`}
+            onClick={handleTheme}
+          />
         </div>
       </div>
     </div>

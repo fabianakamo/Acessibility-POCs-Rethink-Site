@@ -1,12 +1,15 @@
 .menu_container {
-    background-color: var(--color-detail);
+  background-color: var(--color-detail);
 }
 
-
 .menu_button {
-    color: var(--color-dark);
+  color: var(--color-dark);
+}
+
+.menu_button:hover {
+  color: var(--color-gray);
 }
 
 .content {
-    color: black;
+  color: black;
 }

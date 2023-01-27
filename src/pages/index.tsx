@@ -14,10 +14,10 @@ export default function Home() {
     <>
       <ThemeProvider>
         <Nav />
+        <RetractableMenu />
         <TitleContent />
         <MailForm />
         <Footer />
-        <RetractableMenu />
         <FloatingWpp />
       </ThemeProvider>
     </>
