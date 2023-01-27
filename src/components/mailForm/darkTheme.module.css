@@ -9,7 +9,6 @@
 .submit_button {
     background-color: var(--color-dark);
     color: var(--color-light);
-
 }
 
 .submit_button:hover {

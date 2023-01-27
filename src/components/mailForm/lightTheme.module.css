@@ -8,15 +8,15 @@
 
 .submit_button {
   background-color: var(--color-dark);
-  color: var(--color-dark);
+  color: var(--color-light);
 }
 
 .submit_button:hover {
-  background-color: var(--color-dark);
+  background-color: var(--color-secondary-hover);
   color: var(--color-light);
 }
 
 .submit_button:focus {
-  background-color: var(--color-dark);
+  background-color: var(--color-secondary-hover);
   color: var(--color-light);
 }

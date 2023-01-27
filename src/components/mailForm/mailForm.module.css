@@ -32,12 +32,6 @@
   border: 1px solid rgba(27, 27, 27, 0.3);
   cursor: pointer;
   text-decoration: none;
-  background-color: var(--color-dark);
-  color: var(--color-light);
-}
-
-.submit_button:hover {
-  background-color: var(--color-secondary-hover);
 }
 
 .form_button {
