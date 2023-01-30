@@ -77,32 +77,30 @@ const RetractableMenu = () => {
           id="options"
           className={`${mainTheme.content} ${toggle && mainTheme.active}`}
         >
-          {/* O TAB NAO PASSA POR AQUI - TEM QUE SER BUTTON*/}
-          {/* <div
-            className={`${styles[theme].icon_increaseText} ${mainTheme.icon_increaseText}`}
-          >
-            <TextIncreaseIcon
-              className={`${styles[theme].icon_increaseText} ${mainTheme.icon_increaseText}`}
-            />
-          </div> */}
-          {/* <button onClick={increaseSize}>A+</button> */}
-          <TextIncreaseIcon
-            className={`${styles[theme].icon_accessibility} ${mainTheme.icon_accessibility}`}
+          <button
             onClick={increaseSize}
-          />
-          {/* <FormatClearIcon onClick={normalSize} /> */}
-          <FormatClearIcon
-            className={`${styles[theme].icon_accessibility} ${mainTheme.icon_accessibility}`}
+            className={`${styles[theme].retractable_menu_button} ${mainTheme.retractable_menu_button}`}
+          >
+            <TextIncreaseIcon />
+          </button>
+          <button
             onClick={normalSize}
-          />
-          <TextDecreaseIcon
-            className={`${styles[theme].icon_accessibility} ${mainTheme.icon_accessibility}`}
+            className={`${styles[theme].retractable_menu_button} ${mainTheme.retractable_menu_button}`}
+          >
+            <FormatClearIcon />
+          </button>
+          <button
             onClick={decreaseSize}
-          />
-          <ContrastIcon
-            className={`${styles[theme].icon_accessibility} ${mainTheme.icon_accessibility}`}
+            className={`${styles[theme].retractable_menu_button} ${mainTheme.retractable_menu_button}`}
+          >
+            <TextDecreaseIcon />
+          </button>
+          <button
             onClick={handleTheme}
-          />
+            className={`${styles[theme].retractable_menu_button} ${mainTheme.retractable_menu_button}`}
+          >
+            <ContrastIcon />
+          </button>
         </div>
       </div>
     </div>
