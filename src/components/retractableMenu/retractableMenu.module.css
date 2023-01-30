@@ -9,6 +9,7 @@
   border: 1px solid;
   border-radius: 9999px;
   transition: width 1s;
+  z-index: 30;
 }
 
 .relative_div {
@@ -53,4 +54,22 @@
 .icon_accessibility {
   width: 36px;
   height: 36px;
+}
+
+.retractable_menu_button svg {
+  width: 36px;
+  height: 36px;
+}
+
+.retractable_menu_button {
+  cursor: pointer;
+  width: 41px;
+  height: 41px;
+  border-radius: 50%;
+  background-color: var(--color-light);
+}
+
+.retractable_menu_button:hover {
+  background-color: #2221215e;
+  transition: 0.2s;
 }
