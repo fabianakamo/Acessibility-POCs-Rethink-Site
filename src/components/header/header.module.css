@@ -59,7 +59,7 @@
   display: flex;
   position: relative;
   top: 125px;
-  font-family: 'Messina Sans';
+  font-family: "Messina Sans";
   font-style: normal;
   font-weight: 400;
   font-size: 64px;
@@ -70,7 +70,7 @@
 }
 
 .header_menuExpanded a:after {
-  content: '';
+  content: "";
   position: absolute;
   width: 100%;
   transform: scaleX(0);
@@ -86,6 +86,23 @@
   transform-origin: bottom left;
 }
 
+.header_hamburguer_on {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 5%;
+  z-index: 4;
+  height: 27px;
+  width: 27px;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+  animation: appear 0.5s;
+  /* opacity: 1;
+  transition: opacity 0.3s; */
+}
+
 .header_hamburguer {
   display: none;
   position: absolute;
@@ -98,10 +115,34 @@
   cursor: pointer;
 }
 
+.header_hamburguer_off {
+  animation: desappear 0.5s;
+  display: none;
+  /* opacity: 0;
+  transition: opacity 0.3s; */
+}
+
 .header_hamburguer svg {
   scale: 0.8;
   height: 30px;
   width: 30px;
+}
+
+@keyframes appear {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes desappear {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
 
 @media screen and (max-width: 768px) {
@@ -124,7 +165,6 @@
     display: none;
   }
 }
-
 
 /* .hamburgerVisible {
   display: none;
@@ -154,9 +194,6 @@
     transition: all 0.2s;
     z-index: 1;
   } */
-
-
-
 
 /* @media screen and (max-width: 768px) {
     .hamburger {

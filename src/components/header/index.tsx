@@ -7,9 +7,12 @@ import mainTheme from "./header.module.css";
 import light from "./lightTheme.module.css";
 import dark from "./darkTheme.module.css";
 
+import ReactDOM from "react-dom";
+
 export default function Nav() {
   const [isNavExpanded, setIsNavExpanded] = useState(false);
   const [theme, setTheme] = useState<"light" | "dark">("dark");
+  const [display, setDisplay] = useState(false);
 
   const currentTheme = useTheme();
 
@@ -20,20 +23,27 @@ export default function Nav() {
   const styles = { light, dark };
 
   // Hamburguer Menu
-  const handleScroll = () => {
-    const menu = document.getElementById("menu");
-    if (document.documentElement.scrollTop > 100) {
-      if (menu) {
-        menu.style.display = "flex";
-        menu.style.position = "fixed";
-      }
-    } else {
-      if (menu) menu.style.display = "none";
-    }
-  };
+  // const handleScroll = () => {
+  //   const menu = document.getElementById("menu");
+  //   // let bool = true;
+  //   if (document.documentElement.scrollTop > 100) {
+  //     if (menu) {
+  //       menu.style.display = "flex";
+  //       menu.style.position = "fixed";
+  //     }
+  //   } else {
+  //     if (menu) menu.style.display = "none";
+  //   }
+  // };
+
+  // useEffect(() => {
+  //   console.log(display);
+  // }, [display]);
 
   useEffect(() => {
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener("scroll", () =>
+      setDisplay(document.documentElement.scrollTop > 100)
+    );
   }, []);
 
   return (
@@ -43,7 +53,9 @@ export default function Nav() {
       >
         <button
           id="menu"
-          className={`${styles[theme].header_hamburguer} ${mainTheme.header_hamburguer}`}
+          className={`${styles[theme].header_hamburguer} ${
+            mainTheme.header_hamburguer_on
+          } ${!display && mainTheme.header_hamburguer_off}`}
           onClick={() => {
             setIsNavExpanded(!isNavExpanded);
           }}
