@@ -2,11 +2,20 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 4.7% 4.5% 0 4.5%;
+  padding: 4.7% 4.5% 0 2%;
   border-bottom: 1px solid var(--color-dark);
 }
 
-.header_buttons {
+.header_logo {
+  display: flex;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 25px;
+  transition: all 0.2s;
+}
+
+.header_buttons,
+.mobile_buttons {
   display: flex;
   align-content: center;
   flex-wrap: wrap;
@@ -29,22 +38,110 @@
   transform: translateY(-3px);
 }
 
-.hamburger {
+.header_menuExpanded {
+  display: flex;
+  flex-direction: column;
+  position: fixed;
+  align-items: center;
+  padding: 2px 0;
+  width: 100%;
+  height: 100%;
+  top: 0px;
+  row-gap: 32px;
+  right: 0;
+  z-index: 2;
+}
+
+.header_menuExpanded a {
+  margin-left: -20%;
+  width: 947px;
+  height: 64px;
+  display: flex;
+  position: relative;
+  top: 125px;
+  font-family: 'Messina Sans';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 64px;
+  line-height: 100%;
+  letter-spacing: -0.01em;
+  text-transform: uppercase;
+  text-decoration: none;
+}
+
+.header_menuExpanded a:after {
+  content: '';
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  transform-origin: bottom right;
+  transition: transform 0.25s ease-out;
+}
+
+.header_menuExpanded a:hover:after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+.header_hamburguer {
+  display: none;
+  position: absolute;
+  top: 5%;
+  z-index: 4;
+  height: 30px;
+  width: fit-content;
+  border: none;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.header_hamburguer svg {
+  scale: 0.8;
+  height: 30px;
+  width: 30px;
+}
+
+@media screen and (max-width: 768px) {
+  .header_buttons {
+    display: none;
+  }
+
+  .header_menuHidden {
+    display: none;
+  }
+
+  /* Com as letras grandes vai precisar de outro 'design' pra fazer responsividade */
+  /* .header_menuExpanded a {
+    margin-left: 50px;
+  } */
+}
+
+@media screen and (min-width: 768px) {
+  .header_menuHidden {
+    display: none;
+  }
+}
+
+
+/* .hamburgerVisible {
   display: none;
   border: none;
   cursor: pointer;
 }
 
-.hamburger svg {
+.hamburgerVisible svg {
   scale: 1.3;
-}
+} *
 
-@media screen and (max-width: 768px) {
-  .hamburger {
+
+ /* .hamburgerVisible {
     display: block;
-  }
+  } */
 
-  .mobile_buttons {
+/* .mobile_buttonsVisible {
     display: flex;
     flex-direction: column;
     position: absolute;
@@ -56,9 +153,19 @@
     right: 0;
     transition: all 0.2s;
     z-index: 1;
-  }
+  } */
 
-  .header_buttons {
-    display: none;
-  }
-}
+
+
+
+/* @media screen and (max-width: 768px) {
+    .hamburger {
+      display: block;
+    }
+  
+
+  
+    .header_buttons {
+      display: none;
+    }
+  } */

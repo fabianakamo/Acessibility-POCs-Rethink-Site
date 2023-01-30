@@ -26,3 +26,19 @@
         background-color: var(--color-dark);
     }
 }
+
+.header_menuExpanded {
+    background-color: var(--color-dark);
+}
+
+.header_menuExpanded a {
+    color: var(--color-light);
+}
+
+.header_menuExpanded a:after {
+    background-color: var(--color-detail);
+}
+
+.header_hamburguer {
+    background-color: var(--color-detail);
+}
