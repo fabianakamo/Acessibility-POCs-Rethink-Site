@@ -68,9 +68,7 @@ const RetractableMenu = () => {
             }}
             className={`${styles[theme].menu_button} ${mainTheme.menu_button}`}
           >
-            <AccessibilityNewIcon
-              className={`${styles[theme].icon_accessibility} ${mainTheme.icon_accessibility}`}
-            />
+            <AccessibilityNewIcon />
           </button>
         </div>
         <div

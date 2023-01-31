@@ -23,7 +23,7 @@ const FloatingWpp = () => {
       href="https://wa.me/5527998439277?text=Olá%20!%20Bom%20dia"
       className={`${styles[theme].wpp_container} ${mainTheme.wpp_container}`}
     >
-      <WppIcon className={`${styles[theme].iconWpp} ${mainTheme.iconWpp}`} />
+      <WppIcon />
     </a>
   );
 };
