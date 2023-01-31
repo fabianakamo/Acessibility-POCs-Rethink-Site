@@ -32,7 +32,7 @@
 }
 
 .menu_button:focus {
-  border: 2px solid var(--color-focus)
+  border: 2px solid var(--color-focus);
 }
 
 .content {
@@ -55,7 +55,7 @@
   transition: opacity 1s;
 }
 
-.icon_accessibility {
+.icon_accessibility svg {
   width: 36px;
   height: 36px;
 }
@@ -76,9 +76,9 @@
 .retractable_menu_button:hover {
   background-color: #2221215e;
   transition: 0.2s;
-  border: 2px solid var(--color-focus)
+  border: 2px solid var(--color-focus);
 }
 
 .retractable_menu_button:focus {
-  border: 2px solid var(--color-focus)
+  border: 2px solid var(--color-focus);
 }

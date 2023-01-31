@@ -13,16 +13,16 @@
   box-shadow: rgb(0 0 0 / 36%) 0px 10px 30px;
 }
 
-.iconWpp {
+.iconWpp svg {
   color: var(--color-light);
   width: 36px;
   height: 36px;
 }
 
 .wpp_container:hover {
-  border: 2px solid var(--color-focus)
+  border: 2px solid var(--color-focus);
 }
 
 .wpp_container:focus {
-  border: 2px solid var(--color-focus)
+  border: 2px solid var(--color-focus);
 }
