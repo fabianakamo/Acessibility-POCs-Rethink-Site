@@ -23,3 +23,11 @@
 .footer_icons svg {
   cursor: pointer;
 }
+
+.footer_icons svg:hover {
+  border: 2px solid var(--color-focus)
+}
+
+.footer_icons a:focus {
+  border: 2px solid var(--color-focus)
+}

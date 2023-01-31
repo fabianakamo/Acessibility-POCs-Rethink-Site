@@ -16,6 +16,10 @@
   line-height: 90px;
 }
 
+.text_container h1:focus {
+  border: 2px solid var(--color-focus)
+}
+
 .text_container p {
   font-style: normal;
   font-weight: 300;

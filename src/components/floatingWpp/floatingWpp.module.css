@@ -4,7 +4,6 @@
   right: 0px;
   width: 60px;
   height: 60px;
-  background-color: #2dce65;
   border-radius: 50%;
   cursor: pointer;
   display: flex;
@@ -14,12 +13,16 @@
   box-shadow: rgb(0 0 0 / 36%) 0px 10px 30px;
 }
 
-.wpp_container:hover {
-  background-color: #24aa53;
-}
-
 .iconWpp {
-  color: white;
+  color: var(--color-light);
   width: 36px;
   height: 36px;
+}
+
+.wpp_container:hover {
+  border: 2px solid var(--color-focus)
+}
+
+.wpp_container:focus {
+  border: 2px solid var(--color-focus)
 }

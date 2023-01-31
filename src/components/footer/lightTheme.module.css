@@ -15,6 +15,6 @@
   color: var(--color-detail);
 }
 
-.footer_icons svg:focus {
+.footer_icons a:focus {
   color: var(--color-detail);
 }

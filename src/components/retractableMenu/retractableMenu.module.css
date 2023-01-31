@@ -31,6 +31,10 @@
   border-radius: 50%;
 }
 
+.menu_button:focus {
+  border: 2px solid var(--color-focus)
+}
+
 .content {
   position: absolute;
   right: 60px;
@@ -72,4 +76,9 @@
 .retractable_menu_button:hover {
   background-color: #2221215e;
   transition: 0.2s;
+  border: 2px solid var(--color-focus)
+}
+
+.retractable_menu_button:focus {
+  border: 2px solid var(--color-focus)
 }

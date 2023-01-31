@@ -34,6 +34,10 @@
   text-decoration: none;
 }
 
+.submit_button:focus {
+  border: 2px solid var(--color-focus)
+}
+
 .form_button {
   display: flex;
   align-items: center;

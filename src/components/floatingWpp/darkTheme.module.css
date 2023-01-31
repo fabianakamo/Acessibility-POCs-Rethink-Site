@@ -1,0 +1,11 @@
+.wpp_container {
+    background-color: #2dce65;
+}
+
+.wpp_container:hover {
+    background-color: #24aa53;
+}
+
+.wpp_container:focus {
+    background-color: #24aa53;
+}
