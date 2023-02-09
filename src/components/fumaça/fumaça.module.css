@@ -1,0 +1,78 @@
+.body {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding-left: 300px;
+  filter: contrast(2);
+}
+
+.container {
+  background-color: black;
+  width: 650px;
+  height: 350px;
+  display: flex;
+  position: relative;
+}
+
+.fuma1 {
+  position: absolute;
+
+  background: #f2ffa3;
+
+  filter: blur(60px);
+  transform: matrix(1, -0.3, -0.1, -0.7, 0, 0);
+
+  width: 320px;
+  height: 181.61px;
+  left: 184px;
+  top: 75px;
+  background: #d3fa3a;
+  border-radius: 50%;
+}
+
+.fuma2 {
+  position: absolute;
+  width: 300px;
+  height: 120px;
+  left: 234px;
+  top: 90px;
+
+  background: #a3ffda;
+  mix-blend-mode: exclusion;
+  filter: blur(10px);
+  /* transform: matrix(0.6, -0.8, -0.99, -0.1, 0, 0); */
+  border-radius: 50%;
+  transform: matrix(0.9, -0.4, -0.5, -1.3, 0.6, 0.7);
+}
+
+.fuma3 {
+  position: absolute;
+  width: 380px;
+  height: 170px;
+  left: 184px;
+  top: 70px;
+
+  /* height: 202.23px;
+  left: 425.52px;
+  top: 463.48px; */
+
+  background: #d3fa3a;
+  filter: blur(20px);
+  border-radius: 50%;
+  transform: matrix(0.92, -0.39, -0.39, -0.92, 0, 0);
+}
+
+.fuma4 {
+  position: absolute;
+  left: 216.31px;
+  top: 125px;
+  left: 0;
+  filter: blur(50px);
+  border: 200px solid transparent;
+  border-top: 0;
+  border-bottom: 200px solid #d3fa3a;
+  transform: rot ate(180deg);
+}

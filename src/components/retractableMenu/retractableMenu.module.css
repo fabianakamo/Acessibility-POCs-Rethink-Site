@@ -9,7 +9,7 @@
   border: 1px solid;
   border-radius: 9999px;
   transition: width 1s;
-  z-index: 30;
+  /* z-index: 30; */
 }
 
 .relative_div {

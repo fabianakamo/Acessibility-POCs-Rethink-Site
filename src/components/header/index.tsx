@@ -46,22 +46,44 @@ export default function Nav() {
     );
   }, []);
 
+  function openMenu() {
+    setIsNavExpanded(!isNavExpanded);
+
+    // const menu = document.getElementById("menu_button");
+    // const content_menu = document.getElementById("content_container");
+    // const relative_div = document.getElementById("relative_div");
+    // if (menu && content_menu && relative_div) {
+    //   if (toogleOpen) {
+    //     content_menu.style.opacity = "1";
+    //     content_menu.style.zIndex = "1";
+    //     relative_div.style.scale = "50";
+    //   } else {
+    //     relative_div.style.scale = "1";
+    //     content_menu.style.opacity = "0";
+    //     content_menu.style.zIndex = "-1";
+    //     relative_div.style.zIndex = "0";
+    //   }
+    // }
+  }
+
   return (
     <>
       <div
         className={`${styles[theme].header_container} ${mainTheme.header_container}`}
       >
-        <button
-          id="menu"
-          className={`${styles[theme].header_hamburguer} ${
-            mainTheme.header_hamburguer_on
-          } ${!display && mainTheme.header_hamburguer_off}`}
-          onClick={() => {
-            setIsNavExpanded(!isNavExpanded);
-          }}
-        >
-          <MenuIcon />
-        </button>
+        <div className={mainTheme.container_menu_hamb}>
+          <button
+            id="menu"
+            className={`${styles[theme].header_hamburguer} ${
+              mainTheme.header_hamburguer_on
+            } ${!display && mainTheme.header_hamburguer_off}`}
+            onClick={openMenu}
+          >
+            <MenuIcon />
+          </button>
+          <div className={mainTheme.increase_div} id="increase_div"></div>
+        </div>
+
         <div
           id="menu"
           className={

@@ -1,0 +1,118 @@
+.container {
+  background-color: black;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  /* align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 100px;
+  */
+  position: relative;
+  /* gap: 100px; */
+  /* background-color: white; */
+}
+
+.container_cloud {
+  width: 100vw;
+  height: 100vh;
+  /* background-color: green; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: row-reverse;
+  filter: blur(30px) contrast(2);
+  position: absolute;
+}
+
+.container_cloud2 {
+  /* background-color: aqua; */
+  width: 100vw;
+  height: 100px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* filter: blur(30px); */
+}
+
+.cloud {
+  width: 300px;
+  height: 300px;
+  background-color: #d3fa3a;
+  border-radius: 80% 18% 80% 18% / 80% 18% 80% 18%;
+  transform: rotate(15deg);
+  z-index: 1;
+}
+
+.cloud3 {
+  width: 200px;
+  height: 200px;
+  background-color: #d3fa3a;
+  border-radius: 80% 18% 80% 18% / 80% 18% 80% 18%;
+  transform: rotate(-80deg);
+  /* filter: blur(30px); */
+  /* position: absolute; */
+  z-index: 1;
+}
+
+.ret_bottom {
+  width: 100vw;
+  height: 50px;
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rebeccapurple; */
+}
+
+.bottom_cloud {
+  width: 600px;
+  height: 20px;
+  background-color: #d3fa3a;
+  /* border-radius: 20% / 20%; */
+  border-radius: 100% 100% 0% 0% / 100% 100% 0% 0%;
+  /* border-radius: 80% 18% 80% 18% / 80% 18% 80% 18%; */
+  /* transform: rotate(-0.1deg); */
+  filter: blur(40px);
+  /* z-index: 1; */
+  position: absolute;
+  bottom: 0;
+}
+
+.solid_bottom_cloud {
+  width: 400px;
+  height: 5px;
+  background-color: #d3fa3a;
+  /* border-radius: 20% / 20%; */
+  border-radius: 100% 100% 100% 100% / 100% 100% 100% 100%;
+  /* border-radius: 80% 18% 80% 18% / 80% 18% 80% 18%; */
+  /* transform: rotate(-0.1deg); */
+  filter: blur(15px);
+  /* z-index: 1; */
+  position: absolute;
+  bottom: 0;
+}
+
+.ball_bottom {
+  width: 100vw;
+  height: 50px;
+  position: relative;
+  /* position: absolute; */
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  /* background-color: rebeccapurple; */
+}
+.bottom_ball {
+  background-color: #d3fa3a;
+  width: 100px;
+  height: 30px;
+  border-radius: 50%;
+  filter: blur(40px);
+  position: absolute;
+  right: 35%;
+}

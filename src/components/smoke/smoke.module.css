@@ -1,0 +1,99 @@
+.smoke_container {
+  background-color: red;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 100px;
+  position: relative;
+  /* filter: blur(10px); */
+}
+
+.smoke1,
+.smoke2,
+.smoke3,
+.smoke4,
+.smoke5 {
+  position: absolute;
+  filter: blur(90px);
+}
+
+.smoke1 {
+  left: -100px;
+  top: -150px;
+  width: 70vw;
+  height: 80vh;
+  /* background-color: rebeccapurple; */
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(133, 178, 105, 1),
+    rgba(74, 178, 115, 1) 110%
+  );
+}
+
+.smoke2 {
+  width: 100vw;
+  height: 100vh;
+  right: -100px;
+  bottom: -200px;
+  transform: matrix(0.92, -0.3, -0.39, -0.92, 0, 0);
+  border-radius: 50%;
+  background: linear-gradient(
+    90deg,
+    rgba(152, 179, 43, 1),
+    rgba(133, 178, 105, 1) 70%
+  );
+}
+
+.smoke3 {
+  background-color: rgba(233, 255, 142, 1);
+  width: 30vw;
+  height: 45vh;
+  top: 180px;
+  left: 350px;
+  border-radius: 50%;
+}
+
+.smoke4 {
+  width: 70vw;
+  height: 80vh;
+  left: 150px;
+  bottom: -100px;
+  transform: matrix(0.92, -0.4, -0.39, -0.92, 0, 0);
+  border-radius: 50%;
+  /* background-color: rgba(152, 179, 43, 1); */
+  background: linear-gradient(
+    90deg,
+    rgba(152, 179, 43, 1),
+    rgba(133, 178, 105, 1) 100%
+  );
+}
+
+.smoke5 {
+  width: 70vw;
+  height: 75vh;
+  right: -60px;
+  bottom: 20px;
+  transform: matrix(0.92, -0.3, -0.39, -0.92, 0, 0);
+  border-radius: 50%;
+  background-color: rgba(133, 178, 105, 1);
+  /* background: linear-gradient(
+    90deg,
+    rgba(152, 179, 43, 1),
+    rgba(133, 178, 105, 1) 20%
+  ); */
+}
+
+.container_title {
+  width: 70vw;
+  /* background-color: red; */
+  color: white;
+  font-weight: 700;
+  font-size: 100px;
+  line-height: 100%;
+  z-index: 1;
+}
