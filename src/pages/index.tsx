@@ -6,6 +6,7 @@ import RetractableMenu from "../components/retractableMenu";
 import TitleContent from "../components/titleContent";
 import { Inter } from "@next/font/google";
 import ThemeProvider from "../providers/ThemeProvider";
+import Billboard from "../components/billboard";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -16,6 +17,7 @@ export default function Home() {
         <Nav />
         <RetractableMenu />
         <TitleContent />
+        <Billboard />
         <MailForm />
         <Footer />
         <FloatingWpp />
