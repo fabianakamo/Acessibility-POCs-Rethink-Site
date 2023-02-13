@@ -11,6 +11,49 @@ import {
 } from "framer-motion";
 import { wrap } from "@motionone/utils";
 
+const logos = [
+  {
+    name: "Logo Gol",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676044104/gol-logo-mono-branco-logo-monocromatico-branco_1_wjhifd.png",
+  },
+  {
+    name: "Logo Esfera",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676298991/White_ov0fz7.png",
+  },
+  {
+    name: "Logo Fundep",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676305125/Group_c3eycw.png",
+  },
+  {
+    name: "Logo American Tower",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676305090/Group_1_xrp3zl.png",
+  },
+  {
+    name: "Logo American Tower",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676305476/Subtract_1_tt7nvl.png",
+  },
+  {
+    name: "Logo Smiles",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676306558/Smiles_vy9ovw.png",
+  },
+  {
+    name: "Logo Nerus",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676306727/Frame_1_r8rayv.png",
+  },
+  {
+    name: "Logo BASF",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676306916/BASF_ayt5mk.png",
+  },
+  {
+    name: "Logo Clarice",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676306874/Frame_3_tvfiau.png",
+  },
+  {
+    name: "Logo Sulamerica",
+    url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676307255/Sulamerica_pnhpxi.png",
+  },
+];
+
 interface ParallaxProps {
   children: JSX.Element;
   baseVelocity: number;
@@ -33,7 +76,7 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
    * have to replace for wrapping that works for you or dynamically
    * calculate
    */
-  const x = useTransform(baseX, (v) => `${wrap(-20, -30, v)}%`);
+  const x = useTransform(baseX, (v) => `${wrap(-20, -70, v)}%`);
 
   const directionFactor = useRef<number>(1);
   useAnimationFrame((t, delta) => {
@@ -66,14 +109,6 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
       <motion.div className={styles.scroller} style={{ x }}>
         <span>{children} </span>
         <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
-        <span>{children} </span>
       </motion.div>
     </div>
   );
@@ -82,22 +117,28 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 export default function Billboard() {
   return (
     <section className={styles.section}>
-      <ParallaxText baseVelocity={-5}>
+      <ParallaxText baseVelocity={-2}>
         <div className={styles.logo_and_line}>
-          <img
-            src="https://res.cloudinary.com/dyszk230x/image/upload/v1676044104/gol-logo-mono-branco-logo-monocromatico-branco_1_wjhifd.png"
-            alt="Gol Logo"
-          />
-          <div className={styles.line} />
+          {logos.map((logo: any, i: any) => {
+            return (
+              <div className={styles.logo_and_line} key={i}>
+                <img src={logo.url} alt={logo.name} />
+                <div className={styles.line} />
+              </div>
+            );
+          })}
         </div>
       </ParallaxText>
-      <ParallaxText baseVelocity={5}>
+      <ParallaxText baseVelocity={2}>
         <div className={styles.logo_and_line}>
-          <img
-            src="https://res.cloudinary.com/dyszk230x/image/upload/v1676044104/gol-logo-mono-branco-logo-monocromatico-branco_1_wjhifd.png"
-            alt="Gol Logo"
-          />
-          <div className={styles.line} />
+          {logos.map((logo: any, i: any) => {
+            return (
+              <div className={styles.logo_and_line} key={i}>
+                <img src={logo.url} alt={logo.name} />
+                <div className={styles.line} />
+              </div>
+            );
+          })}
         </div>
       </ParallaxText>
     </section>
