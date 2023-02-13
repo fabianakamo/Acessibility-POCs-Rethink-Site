@@ -83,16 +83,22 @@ export default function Billboard() {
   return (
     <section className={styles.section}>
       <ParallaxText baseVelocity={-5}>
-        <img
-          src="https://res.cloudinary.com/dyszk230x/image/upload/v1676044104/gol-logo-mono-branco-logo-monocromatico-branco_1_wjhifd.png"
-          alt="Gol Logo"
-        />
+        <div className={styles.logo_and_line}>
+          <img
+            src="https://res.cloudinary.com/dyszk230x/image/upload/v1676044104/gol-logo-mono-branco-logo-monocromatico-branco_1_wjhifd.png"
+            alt="Gol Logo"
+          />
+          <div className={styles.line} />
+        </div>
       </ParallaxText>
       <ParallaxText baseVelocity={5}>
-        <img
-          src="https://res.cloudinary.com/dyszk230x/image/upload/v1676044104/gol-logo-mono-branco-logo-monocromatico-branco_1_wjhifd.png"
-          alt="Gol Logo"
-        />
+        <div className={styles.logo_and_line}>
+          <img
+            src="https://res.cloudinary.com/dyszk230x/image/upload/v1676044104/gol-logo-mono-branco-logo-monocromatico-branco_1_wjhifd.png"
+            alt="Gol Logo"
+          />
+          <div className={styles.line} />
+        </div>
       </ParallaxText>
     </section>
   );

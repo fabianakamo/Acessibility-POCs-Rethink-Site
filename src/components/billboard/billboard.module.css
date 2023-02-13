@@ -34,5 +34,18 @@
 
 .parallax span {
   display: block;
-  margin-right: 240px;
+  margin-right: 90px;
+}
+
+.line {
+  width: 60px;
+  height: 0px;
+  opacity: 0.3;
+  border: 1px solid #b6b4b4;
+}
+
+.logo_and_line {
+  display: flex;
+  align-items: center;
+  gap: 90px;
 }
