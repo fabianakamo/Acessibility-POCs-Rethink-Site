@@ -1,15 +1,17 @@
 .header_container {
     background-color: var(--color-dark);
+    border-bottom: 1px solid var(--color-light);
 }
 
 .header_buttons a,
 .mobile_buttons a {
     color: var(--color-light);
+    font-weight: 700;
 }
 
 .header_buttons a:hover,
 .mobile_buttons a:hover {
-    color: var(--color-detail);
+    color: var(--color-focus);
 }
 
 .hamburger {
@@ -17,13 +19,12 @@
 }
 
 .hamburger svg {
-    color: var(--color-detail);
+    color: var(--color-light);
 }
 
 @media screen and (max-width: 768px) {
-
     .mobile_buttons {
-        background-color: var(--color-dark);
+        background-color: var(--color-light);
     }
 }
 
@@ -36,9 +37,14 @@
 }
 
 .header_menuExpanded a:after {
-    background-color: var(--color-detail);
+    background-color: var(--color-focus);
 }
 
 .header_hamburguer {
-    background-color: var(--color-detail);
+    background-color: var(--color-dark);
+    border: 1px solid var(--color-light);
+}
+
+.header_hamburguer svg {
+    color: var(--color-light);
 }

@@ -1,5 +1,7 @@
 .form_container {
-    background-color: var(--color-detail);
+    background-color: var(--color-dark);
+    border-top: 1px solid var(--color-light);
+    border-bottom: 1px solid var(--color-light);
 }
 
 .form {
@@ -7,16 +9,17 @@
 }
 
 .submit_button {
-    background-color: var(--color-dark);
-    color: var(--color-light);
+    background-color: var(--color-light);
+    color: var(--color-dark);
 }
 
 .submit_button:hover {
     background-color: var(--color-secondary-hover);
     color: var(--color-light);
+    border: 2px solid var(--color-focus);
 }
 
 .submit_button:focus {
     background-color: var(--color-secondary-hover);
-    color: var(--color-light);
+    color: var(--color-focus);
 }

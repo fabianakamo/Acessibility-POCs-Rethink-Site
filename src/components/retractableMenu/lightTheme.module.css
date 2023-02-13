@@ -1,16 +1,21 @@
 .menu_container {
-    background-color: var(--color-light);
+    background-color: var(--color-detail);
 }
-
 
 .menu_button {
     color: var(--color-dark);
 }
 
-.content {
-    color: var();
+.menu_button:hover {
+    color: var(--color-gray);
 }
 
-.icon_accessibility {
-    background-color: var(--color-light);
+.content {
+    color: black;
+}
+
+.retractable_menu_button:hover {
+    background-color: #2221215e;
+    transition: 0.2s;
+    border: 2px solid var(--color-focus);
 }

@@ -1,11 +1,11 @@
 .wpp_container {
-    background-color: var(--color-dark);
+    background-color: #2dce65;
 }
 
 .wpp_container:hover {
-    background-color: var(--color-secondary-hover);
+    background-color: #24aa53;
 }
 
 .wpp_container:focus {
-    background-color: var(--color-secondary-hover);
+    background-color: #24aa53;
 }

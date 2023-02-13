@@ -1,48 +1,44 @@
 .header_container {
-  background-color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 .header_buttons a,
 .mobile_buttons a {
-  color: var(--color-dark);
-  font-weight: 700;
+  color: var(--color-light);
 }
 
 .header_buttons a:hover,
 .mobile_buttons a:hover {
-  color: var(--color-dark);
+  color: var(--color-detail);
 }
 
 .hamburger {
-  background-color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 .hamburger svg {
-  color: var(--color-dark);
+  color: var(--color-detail);
 }
 
 @media screen and (max-width: 768px) {
+
   .mobile_buttons {
-    background-color: var(--color-light);
+    background-color: var(--color-dark);
   }
 }
 
 .header_menuExpanded {
-  background-color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 .header_menuExpanded a {
-  color: var(--color-dark);
+  color: var(--color-light);
 }
 
 .header_menuExpanded a:after {
-  background-color: var(--color-dark);
+  background-color: var(--color-detail);
 }
 
 .header_hamburguer {
-  background-color: var(--color-dark);
-}
-
-.header_hamburguer svg {
-  color: var(--color-light);
+  background-color: var(--color-detail);
 }

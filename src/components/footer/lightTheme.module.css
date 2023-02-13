@@ -1,20 +1,19 @@
 .footer_container {
-  background-color: var(--color-light);
+  background-color: var(--color-dark);
 }
 
 .footer_info p {
-  color: var(--color-dark);
-  font-weight: 400;
+  color: var(--color-light);
 }
 
 .footer_icons svg {
-  color: var(--color-dark);
+  color: var(--color-detail);
 }
 
 .footer_icons svg:hover {
-  color: var(--color-detail);
+  color: var(--color-light);
 }
 
 .footer_icons a:focus {
-  color: var(--color-detail);
+  color: var(--color-light);
 }

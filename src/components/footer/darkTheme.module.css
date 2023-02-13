@@ -4,16 +4,17 @@
 
 .footer_info p {
     color: var(--color-light);
+    font-weight: 400;
 }
 
 .footer_icons svg {
-    color: var(--color-detail);
+    color: var(--color-light);
 }
 
 .footer_icons svg:hover {
-    color: var(--color-light);
+    color: var(--color-detail);
 }
 
 .footer_icons a:focus {
-    color: var(--color-light);
+    color: var(--color-detail);
 }

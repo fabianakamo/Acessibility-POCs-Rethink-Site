@@ -3,7 +3,7 @@ import { useState } from "react";
 import { ThemeContext } from "../context/ThemeContext";
 
 function ThemeProvider({ children }: { children: React.ReactNode }) {
-  const [theme, setTheme] = useState<CurrentTheme>({ theme: "dark" });
+  const [theme, setTheme] = useState<CurrentTheme>({ theme: "light" });
 
   const setCurrentTheme = (theme: CurrentTheme) => {
     setTheme(theme);
