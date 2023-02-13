@@ -35,6 +35,8 @@ const logos = [
   {
     name: "Logo Smiles",
     url: "https://res.cloudinary.com/dyszk230x/image/upload/v1676306558/Smiles_vy9ovw.png",
+    altLogo:
+      "https://res.cloudinary.com/dyszk230x/image/upload/v1676308697/Smiles_ck3k5r.png",
   },
   {
     name: "Logo Nerus",
@@ -117,24 +119,42 @@ function ParallaxText({ children, baseVelocity = 100 }: ParallaxProps) {
 export default function Billboard() {
   return (
     <section className={styles.section}>
-      <ParallaxText baseVelocity={-2}>
+      <ParallaxText baseVelocity={-1}>
         <div className={styles.logo_and_line}>
           {logos.map((logo: any, i: any) => {
             return (
               <div className={styles.logo_and_line} key={i}>
-                <img src={logo.url} alt={logo.name} />
+                <img
+                  src={logo.url}
+                  onMouseEnter={(e): void => {
+                    logo.altLogo && (e.currentTarget.src = logo.altLogo);
+                  }}
+                  onMouseLeave={(e): void => {
+                    logo.url && (e.currentTarget.src = logo.url);
+                  }}
+                  alt={logo.name}
+                />
                 <div className={styles.line} />
               </div>
             );
           })}
         </div>
       </ParallaxText>
-      <ParallaxText baseVelocity={2}>
+      <ParallaxText baseVelocity={1}>
         <div className={styles.logo_and_line}>
-          {logos.map((logo: any, i: any) => {
+          {logos.reverse().map((logo: any, i: any) => {
             return (
               <div className={styles.logo_and_line} key={i}>
-                <img src={logo.url} alt={logo.name} />
+                <img
+                  src={logo.url}
+                  onMouseEnter={(e): void => {
+                    logo.altLogo && (e.currentTarget.src = logo.altLogo);
+                  }}
+                  onMouseLeave={(e): void => {
+                    logo.url && (e.currentTarget.src = logo.url);
+                  }}
+                  alt={logo.name}
+                />
                 <div className={styles.line} />
               </div>
             );
