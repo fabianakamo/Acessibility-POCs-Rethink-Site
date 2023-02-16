@@ -61,7 +61,7 @@ export default function Footer() {
         </a>
       </div>
       <div className={`${styles[theme].footer_info} ${mainTheme.footer_info}`}>
-        <p>Powered with ♥ by Gabs, Fabi and Ana</p>
+        <p>Powered with ♥ by Gabs, Fabi, Ana and Carol</p>
       </div>
     </div>
   );
